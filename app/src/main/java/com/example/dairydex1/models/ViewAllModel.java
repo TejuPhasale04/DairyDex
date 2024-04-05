@@ -1,26 +1,22 @@
 package com.example.dairydex1.models;
 
-import java.util.Objects;
+import java.util.ArrayList;
 
 public class ViewAllModel {
-    String name;
-    String description;
-    String rating;
-    String img_url;
-    String type;
-    int price;
+    private String name;
+    private String description;
+    private String rating;
+    private int img_url;
 
-   public ViewAllModel(){
+    public ViewAllModel() {
+        // Default constructor required for Firebase
+    }
 
-   }
-
-    public ViewAllModel(String name, String description, String rating, String img_url, String type, int price) {
+    public ViewAllModel(String name, String description, String rating, int img_url) {
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.img_url = img_url;
-        this.type = type;
-        this.price = price;
     }
 
     public String getName() {
@@ -47,27 +43,26 @@ public class ViewAllModel {
         this.rating = rating;
     }
 
-    public String getImg_url() {
+    public int getImg_url() {
         return img_url;
     }
 
-    public void setImg_url(String img_url) {
+    public void setImg_url(int img_url) {
         this.img_url = img_url;
     }
 
-    public String getType() {
-        return type;
-    }
+    public static ArrayList<ViewAllModel> createViewAllList(int numItems, String[] names, String[] descriptions, String[] ratings, int[] imageResources) {
+        ArrayList<ViewAllModel> items = new ArrayList<>();
 
-    public void setType(String type) {
-        this.type = type;
-    }
+        for (int i = 0; i < numItems; i++) {
+            // Ensure the arrays have enough elements for all items
+            int nameIndex = i % names.length;
+            int descriptionIndex = i % descriptions.length;
+            int ratingIndex = i % ratings.length;
+            int imageIndex = i % imageResources.length;
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
+            items.add(new ViewAllModel(names[nameIndex], descriptions[descriptionIndex], ratings[ratingIndex], imageResources[imageIndex]));
+        }
+        return items;
     }
 }

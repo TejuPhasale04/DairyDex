@@ -1,9 +1,11 @@
 package com.example.dairydex1.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dairydex1.R;
+import com.example.dairydex1.ViewAllActivity;
 import com.example.dairydex1.adapters.PopularAdapter;
 import com.example.dairydex1.adapters.RecommededAdapter;
 import com.example.dairydex1.models.PopularModel;
@@ -56,6 +59,28 @@ public class HomeFragment extends Fragment {
         // Set layout manager for recommended products RecyclerView
         LinearLayoutManager recommendedLayoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         recommended_rec.setLayoutManager(recommendedLayoutManager);
+
+        // Set click listeners for "View All" text
+        TextView viewAllProducts = root.findViewById(R.id.view_all_products);
+        TextView viewAllRecommended = root.findViewById(R.id.view_all_recommended);
+
+        viewAllProducts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open activity_view_all.xml for viewing all products
+                Intent intent = new Intent(requireContext(), ViewAllActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        viewAllRecommended.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open activity_view_all.xml for viewing all recommended products
+                Intent intent = new Intent(requireContext(), ViewAllActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

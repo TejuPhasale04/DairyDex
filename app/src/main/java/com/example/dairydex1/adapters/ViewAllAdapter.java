@@ -39,11 +39,14 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
         holder.descriptionTextView.setText(model.getDescription());
         holder.ratingTextView.setText(model.getRating());
 
-        // Load image using Picasso
+        // Load and resize image using Picasso
         Picasso.get()
                 .load(model.getImg_url())
+                .resize(400, 400) // Resize the image to a smaller size
+                .centerCrop()
                 .into(holder.itemImageView);
     }
+
 
     @Override
     public int getItemCount() {

@@ -83,6 +83,7 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/next"
                 android:layout_width="38dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

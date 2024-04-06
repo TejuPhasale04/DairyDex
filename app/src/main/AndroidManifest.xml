@@ -16,15 +16,22 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".Product3"
+            android:exported="false" />
+        <activity
+            android:name=".Product2"
+            android:exported="false" />
+        <activity
+            android:name=".Product1"
+            android:exported="false" />
+        <activity
             android:name=".ViewAllActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"

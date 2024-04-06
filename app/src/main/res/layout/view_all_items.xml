@@ -89,6 +89,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="5dp"
+                android:onClick="products"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
         </LinearLayout>
 

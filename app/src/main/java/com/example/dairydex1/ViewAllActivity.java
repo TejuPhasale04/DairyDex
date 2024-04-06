@@ -1,6 +1,7 @@
 package com.example.dairydex1;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -38,6 +39,7 @@ public class ViewAllActivity extends AppCompatActivity {
         itemList.add(new ViewAllModel("PRIME", "Unlock the potential of your herd with our premium-grade PRIME Cattle Feed, meticulously crafted to elevate their health and productivity", "4.8", R.drawable.product1));
         itemList.add(new ViewAllModel("GOLD", "Elevate your herd's well-being to gold standards with our meticulously crafted GOLD Cattle Feed, designed to optimize health and performance for superior results.", "4.8", R.drawable.product2));
         itemList.add(new ViewAllModel("MINERAL MIXURE", "Unlock the potential of your livestock with our premium Mineral Mixture, a vital blend enriched with essential nutrients for optimal health and vitality.", "4.9", R.drawable.product3));
+
 
         return itemList;
     }

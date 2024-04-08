@@ -31,7 +31,7 @@ android {
         viewBinding = true
     }
     buildFeatures {
-        dataBinding=true
+        dataBinding = true
     }
 
 }
@@ -55,6 +55,7 @@ dependencies {
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.google.firebase:firebase-firestore:23.0.3")
     implementation(libs.firebase.auth)
     implementation(libs.appcompat)
     testImplementation(libs.junit)

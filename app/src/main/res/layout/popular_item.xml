@@ -5,7 +5,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="15dp"
+    tools:context=".pop_item">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,6 +21,8 @@
             app:riv_corner_radius="14dp"
             android:scaleType="centerCrop"
             android:src="@drawable/carausal1"
+            android:clickable="true"
+            android:focusable="true"
             tools:ignore="MissingClass" />
         <TextView
             android:id="@+id/pop_name"
@@ -41,29 +44,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/ratingbar"
-            android:layout_marginLeft="-5dp"/>
-        <TextView
-            android:id="@+id/pop_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:text="5.0"
-            android:layout_weight="1"
-            android:fontFamily="@font/aclonica"/>
-        <TextView
-            android:id="@+id/pop_dis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:text="Discount 20% off"
-            android:textColor="@color/fresh_parrot_green"
-            android:textStyle="bold"
-            android:gravity="end"
-            android:fontFamily="@font/aclonica"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ratingbar"
+                android:layout_marginLeft="-5dp"/>
+            <TextView
+                android:id="@+id/pop_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="5.0"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"/>
+            <TextView
+                android:id="@+id/pop_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Discount 20% off"
+                android:textColor="@color/fresh_parrot_green"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:fontFamily="@font/aclonica"/>
         </LinearLayout>
     </LinearLayout>
 

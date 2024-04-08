@@ -64,6 +64,7 @@ public class HomeFragment extends Fragment {
         TextView viewAllProducts = root.findViewById(R.id.view_all_products);
         TextView viewAllRecommended = root.findViewById(R.id.view_all_recommended);
 
+
         viewAllProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

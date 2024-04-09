@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_category, R.id.nav_profile,
+                R.id.nav_home,R.id.nav_profile,
                 R.id.nav_products, R.id.nav_my_carts, R.id.nav_my_orders)
                 .setOpenableLayout(drawer)
                 .build();

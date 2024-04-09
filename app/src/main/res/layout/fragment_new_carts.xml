@@ -15,32 +15,33 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintVertical_bias="0.0"
+            android:layout_width="405dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="21dp"
             android:background="@color/fresh_parrot_green"
+            app:layout_constraintBottom_toTopOf="@+id/view_my_cart_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="My Cart"/>
+            app:title="My Cart" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/view_my_cart_detail"
-            android:layout_width="409dp"
-            android:layout_height="673dp"
+            android:layout_width="371dp"
+            android:layout_height="638dp"
+            android:layout_marginTop="21dp"
             android:orientation="vertical"
             android:padding="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="1.0"
             tools:listitem="@layout/activity_my_cart" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/add_to_card"
+            android:id="@+id/buy_Now"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

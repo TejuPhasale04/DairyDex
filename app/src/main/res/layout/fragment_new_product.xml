@@ -16,12 +16,13 @@
             android:id="@+id/newproduct"
             android:layout_width="400dp"
             android:layout_height="300dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="100dp"
             android:src="@mipmap/newproducts"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.241" />
 
         <TextView
             android:layout_width="match_parent"

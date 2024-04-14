@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.activity)
     implementation(libs.firebase.database)
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
     implementation("com.google.firebase:firebase-analytics")

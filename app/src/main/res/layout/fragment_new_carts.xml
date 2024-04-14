@@ -12,20 +12,16 @@
         android:layout_height="match_parent"
         android:name=".DetailedActivity"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="405dp"
-            android:layout_height="88dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="21dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0.0"
             android:background="@color/fresh_parrot_green"
-            app:layout_constraintBottom_toTopOf="@+id/view_my_cart_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="My Cart" />
-
+            app:title="Total Price:$"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/view_my_cart_detail"
             android:layout_width="371dp"

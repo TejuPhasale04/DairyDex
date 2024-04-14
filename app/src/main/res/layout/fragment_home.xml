@@ -27,38 +27,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/aclonica"
-                android:text="Popular Products"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/view_all_products"
-                android:fontFamily="@font/aclonica"
-                android:layout_weight="1"
-                android:text="View All"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="16sp"
-                android:textColor="@color/fresh_parrot_green"/>
-        </LinearLayout>
+            android:weightSum="2"/>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:orientation="horizontal"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="horizontal"
             tools:listitem="@layout/popular_item" />
-
 
         <LinearLayout
             android:layout_marginLeft="10dp"
@@ -68,12 +49,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2">
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="@font/aclonica"
-                android:text="Recommended"
+                android:text="Products"
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <TextView

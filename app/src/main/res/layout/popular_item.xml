@@ -14,60 +14,21 @@
         android:orientation="vertical"
         android:padding="5dp">
 
-        <com.makeramen.roundedimageview.RoundedImageView
+        <ImageView
             android:id="@+id/pop_img"
-            android:layout_width="280dp"
-            android:layout_height="190dp"
-            app:riv_corner_radius="14dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/carausal1"
+            android:layout_width="391dp"
+            android:layout_height="207dp"
             android:clickable="true"
             android:focusable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carausal1"
+            app:riv_corner_radius="14dp"
             tools:ignore="MissingClass" />
-        <TextView
-            android:id="@+id/pop_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/aclonica"
-            android:text="Popular Product"
-            android:textSize="19sp"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/pop_des"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:text="description"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:src="@mipmap/ratingbar"
-                android:layout_marginLeft="-5dp"/>
-            <TextView
-                android:id="@+id/pop_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="5.0"
-                android:layout_weight="1"
-                android:fontFamily="@font/aclonica"/>
-            <TextView
-                android:id="@+id/pop_dis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Discount 20% off"
-                android:textColor="@color/fresh_parrot_green"
-                android:textStyle="bold"
-                android:gravity="end"
-                android:fontFamily="@font/aclonica"/>
-        </LinearLayout>
+            android:orientation="horizontal"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

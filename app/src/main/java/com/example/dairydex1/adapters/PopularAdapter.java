@@ -1,18 +1,19 @@
 package com.example.dairydex1.adapters;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.dairydex1.R;
 import com.example.dairydex1.models.PopularModel;
 import java.util.List;
-
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
 
     private List<PopularModel> popularList;
@@ -28,31 +29,26 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View contactView = inflater.inflate(R.layout.popular_item, parent, false);
+        View itemView = inflater.inflate(R.layout.popular_item, parent, false);
 
-        // Return a new holder instance
-        ViewHolder viewHolder = new ViewHolder(contactView);
-        return viewHolder;
-
-
+        // Return a new ViewHolder instance
+        return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PopularModel popularModel = popularList.get(position);
-        holder.name.setText(popularModel.getName());
-        holder.description.setText(popularModel.getDescription());
-        holder.rating.setText(popularModel.getRating());
-        holder.discount.setText(popularModel.getDiscount());
 
-        // Load image using Glide
+        // Load image using Glide with optimizations
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(R.drawable.img_1) // Placeholder image while loading
+                .diskCacheStrategy(DiskCacheStrategy.ALL); // Caching strategy
+
         Glide.with(holder.itemView.getContext())
                 .load(popularModel.getImageResource())
-                .placeholder(R.drawable.img_1) // Placeholder image while loading
+                .apply(requestOptions) // Apply RequestOptions
                 .into(holder.popImg);
     }
-
-
 
     @Override
     public int getItemCount() {
@@ -61,16 +57,11 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView popImg;
-        TextView name, description, rating, discount;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // Initialize views here
             popImg = itemView.findViewById(R.id.pop_img);
-            name = itemView.findViewById(R.id.pop_name);
-            description = itemView.findViewById(R.id.pop_des);
-            rating = itemView.findViewById(R.id.pop_rate);
-            discount = itemView.findViewById(R.id.pop_dis);
         }
     }
 }

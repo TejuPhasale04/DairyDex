@@ -1,3 +1,4 @@
+
 package com.example.dairydex1.models;
 
 import com.example.dairydex1.R;

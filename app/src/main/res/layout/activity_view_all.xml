@@ -8,17 +8,30 @@
     android:id="@+id/main"
     tools:context=".ViewAllActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view_all_rec"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@color/fresh_parrot_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="All Products"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_all_rec"
+        android:layout_width="408dp"
+        android:layout_height="631dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:padding="10dp"
-        tools:listitem="@layout/view_all_items"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar1"
+        tools:listitem="@layout/view_all_items" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

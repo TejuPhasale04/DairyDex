@@ -2,6 +2,8 @@ package com.example.dairydex1.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,8 @@ import com.example.dairydex1.models.PopularModel;
 import com.example.dairydex1.models.RecommededModel;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HomeFragment extends Fragment {
 
@@ -28,6 +32,10 @@ public class HomeFragment extends Fragment {
     private RecommededAdapter recommendedAdapter; // Corrected variable name
     private ArrayList<PopularModel> popularItems;
     private ArrayList<RecommededModel> recItems;
+    private int[] imageResources; // Declared as class-level variable
+    private int currentImageIndex = 0;
+    private Handler handler;
+    private Timer timer;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -37,7 +45,7 @@ public class HomeFragment extends Fragment {
         recommended_rec = root.findViewById(R.id.recommended_rec);
 
         // Sample data for the slider
-        int[] imageResources = {R.drawable.carausal1, R.drawable.carausal2, R.drawable.carausal3};
+        imageResources = new int[]{R.drawable.carausal1, R.drawable.carausal2, R.drawable.carausal3}; // Moved here
         int[] recImages = {R.drawable.product1, R.drawable.product2, R.drawable.product3};
 
         // Create the list of products
@@ -61,18 +69,7 @@ public class HomeFragment extends Fragment {
         recommended_rec.setLayoutManager(recommendedLayoutManager);
 
         // Set click listeners for "View All" text
-        TextView viewAllProducts = root.findViewById(R.id.view_all_products);
         TextView viewAllRecommended = root.findViewById(R.id.view_all_recommended);
-
-
-        viewAllProducts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open activity_view_all.xml for viewing all products
-                Intent intent = new Intent(requireContext(), ViewAllActivity.class);
-                startActivity(intent);
-            }
-        });
 
         viewAllRecommended.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +80,39 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        // Start timer to change slider images
+        startImageSlider();
+
         return root;
+    }
+
+    private void startImageSlider() {
+        handler = new Handler(Looper.getMainLooper());
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Increment index and make sure it doesn't exceed array size
+                        currentImageIndex++;
+                        if (currentImageIndex >= imageResources.length) {
+                            currentImageIndex = 0; // Reset index to 0 if it exceeds array size
+                        }
+                        // Change the data in adapter
+                        popularItems.get(currentImageIndex).setImageResource(imageResources[currentImageIndex]);
+                        popularAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        }, 1000, 1000); // Change image every 3 seconds
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Stop the timer when fragment is destroyed to avoid memory leaks
+        timer.cancel();
     }
 }

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
+    android:background="@android:color/white"
     tools:context=".ViewAllActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -32,6 +33,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar1"
-        tools:listitem="@layout/view_all_items" />
+        tools:listitem="@layout/view_all_items"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

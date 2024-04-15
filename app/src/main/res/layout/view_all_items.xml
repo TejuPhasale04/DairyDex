@@ -9,17 +9,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@android:color/white">
 
         <ImageView
             android:id="@+id/cat_nav_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="156dp"
+            android:layout_height="match_parent"
             android:scaleType="centerInside"
             android:src="@drawable/product1" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="227dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
@@ -41,8 +42,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aclonica"
-                android:text="Description:"
                 android:maxLines="2"
+                android:text="Description:"
                 android:textSize="10sp" />
 
             <TextView
@@ -74,17 +75,17 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="30dp"
-                    android:src="@mipmap/ratingbar"
-                    android:layout_marginLeft="-5dp"/>
+                    android:layout_marginLeft="-5dp"
+                    android:src="@mipmap/ratingbar" />
 
                 <TextView
                     android:id="@+id/pop_rate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text="4.8"
                     android:layout_weight="1"
-                    android:fontFamily="@font/aclonica"/>
+                    android:fontFamily="@font/aclonica"
+                    android:text="4.8" />
 
             </LinearLayout>
 

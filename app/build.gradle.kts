@@ -61,6 +61,7 @@ dependencies {
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation(libs.firebase.auth)
     implementation(libs.appcompat)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

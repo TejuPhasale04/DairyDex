@@ -10,21 +10,19 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:orientation="vertical"
         android:padding="5dp">
-
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/rec_img"
-            android:layout_width="302dp"
-            android:layout_height="274dp"
+            android:layout_width="274dp"
+            android:layout_height="300dp"
             android:scaleType="centerCrop"
             android:src="@drawable/product1"
             app:riv_corner_radius="14dp"
+            app:riv_border_color="@android:color/transparent"
+            app:riv_border_width="0dp"
             tools:ignore="MissingClass" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

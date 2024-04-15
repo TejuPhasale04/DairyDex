@@ -15,37 +15,44 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+
         <activity
             android:name=".PlacedOrderActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".MyCartActivity"
             android:exported="false" />
+
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
+
         <activity
             android:name=".ViewAllActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity_login"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".Registration"
             android:exported="true"

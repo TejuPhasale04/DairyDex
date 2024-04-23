@@ -16,7 +16,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
 
-    private List<PopularModel> popularList;
+    private final List<PopularModel> popularList;
 
     public PopularAdapter(List<PopularModel> popularList) {
         this.popularList = popularList;
@@ -28,10 +28,10 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        // Inflate the custom layout
+
         View itemView = inflater.inflate(R.layout.popular_item, parent, false);
 
-        // Return a new ViewHolder instance
+
         return new ViewHolder(itemView);
     }
 
@@ -41,12 +41,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
         // Load image using Glide with optimizations
         RequestOptions requestOptions = new RequestOptions()
-                .placeholder(R.drawable.img_1) // Placeholder image while loading
-                .diskCacheStrategy(DiskCacheStrategy.ALL); // Caching strategy
+                .placeholder(R.drawable.img_1)
+                .diskCacheStrategy(DiskCacheStrategy.ALL);
 
         Glide.with(holder.itemView.getContext())
                 .load(popularModel.getImageResource())
-                .apply(requestOptions) // Apply RequestOptions
+                .apply(requestOptions)
                 .into(holder.popImg);
     }
 
@@ -60,7 +60,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // Initialize views here
+
             popImg = itemView.findViewById(R.id.pop_img);
         }
     }

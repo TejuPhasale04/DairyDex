@@ -83,7 +83,7 @@ public class PopularModel {
         this.img_url = img_url;
     }
 
-    private static int lastContactId = 0;
+    private static final int lastContactId = 0;
 
     public static ArrayList<PopularModel> createProductList(int numProducts, int[] imageResources) {
         ArrayList<PopularModel> products = new ArrayList<>();

@@ -29,10 +29,10 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView rvSlider, recommended_rec;
     private PopularAdapter popularAdapter;
-    private RecommededAdapter recommendedAdapter; // Corrected variable name
+    private RecommededAdapter recommendedAdapter;
     private ArrayList<PopularModel> popularItems;
     private ArrayList<RecommededModel> recItems;
-    private int[] imageResources; // Declared as class-level variable
+    private int[] imageResources;
     private int currentImageIndex = 0;
     private Handler handler;
     private Timer timer;
@@ -103,12 +103,17 @@ public class HomeFragment extends Fragment {
                         // Change the data in adapter
                         popularItems.get(currentImageIndex).setImageResource(imageResources[currentImageIndex]);
                         popularAdapter.notifyDataSetChanged();
+                        // Scroll to the next item in the RecyclerView within 1 second
+                        LinearLayoutManager layoutManager = (LinearLayoutManager) rvSlider.getLayoutManager();
+                        if (layoutManager != null) {
+                            int nextItem = (currentImageIndex + 1) % imageResources.length;
+                            layoutManager.smoothScrollToPosition(rvSlider, new RecyclerView.State(), nextItem);
+                        }
                     }
                 });
             }
-        }, 1000, 1000); // Change image every 3 seconds
+        }, 4000, 4000); // Change image every 3 seconds
     }
-
     @Override
     public void onDestroy() {
         super.onDestroy();

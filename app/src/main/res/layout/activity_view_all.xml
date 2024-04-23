@@ -24,7 +24,7 @@
         android:id="@+id/view_all_rec"
         android:layout_width="408dp"
         android:layout_height="631dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:padding="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

@@ -14,17 +14,18 @@
         android:orientation="vertical"
         android:padding="5dp"
         android:background="@android:color/white">
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/pop_img"
-            android:layout_width="373dp"
-            android:layout_height="207dp"
+            android:layout_width="329dp"
+            android:layout_height="194dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="centerCrop"
             android:src="@drawable/carausal1"
-            app:riv_corner_radius="14dp"
             app:riv_border_color="@color/white"
             app:riv_border_width="0dp"
+            app:riv_corner_radius="14dp"
             tools:ignore="MissingClass" />
 
 

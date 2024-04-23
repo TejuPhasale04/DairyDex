@@ -11,7 +11,6 @@ public class ViewAllModel implements Serializable {
     private int img_url;
 
     public ViewAllModel() {
-        // Default constructor required for Firebase
     }
 
     public ViewAllModel(String name, String description, String rating,String price,int img_url) {

@@ -38,10 +38,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="383dp"
-        android:layout_height="215dp"
+        android:layout_width="411dp"
+        android:layout_height="221dp"
         android:layout_marginTop="40dp"
-        android:src="@mipmap/welimg"
+        android:src="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -75,6 +75,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
                 android:text="Login"
+                android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -98,7 +99,8 @@
                 android:layout_marginTop="6dp"
                 android:text="Registration"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
 

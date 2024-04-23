@@ -17,7 +17,7 @@ import java.util.List;
 
 public class RecommededAdapter extends RecyclerView.Adapter<RecommededAdapter.ViewHolder> {
 
-    private List<RecommededModel> recList;
+    private final List<RecommededModel> recList;
 
     public RecommededAdapter(List<RecommededModel> recList) {
         this.recList = recList;
@@ -29,10 +29,8 @@ public class RecommededAdapter extends RecyclerView.Adapter<RecommededAdapter.Vi
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        // Inflate the custom layout
         View recItemView = inflater.inflate(R.layout.rec_item, parent, false);
 
-        // Return a new holder instance
         return new ViewHolder(recItemView);
     }
 
@@ -43,7 +41,7 @@ public class RecommededAdapter extends RecyclerView.Adapter<RecommededAdapter.Vi
         // Set the image using Glide library
         Glide.with(holder.itemView.getContext())
                 .load(recItem.getImg_url())
-                .placeholder(R.drawable.product1) // Placeholder image while loading
+                .placeholder(R.drawable.product1)
                 .into(holder.imageView);
     }
 
@@ -57,7 +55,7 @@ public class RecommededAdapter extends RecyclerView.Adapter<RecommededAdapter.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.rec_img); // assuming you have an ImageView in rec_item layout with id recommended_image
+            imageView = itemView.findViewById(R.id.rec_img);
         }
     }
 }

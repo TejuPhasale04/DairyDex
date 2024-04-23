@@ -13,15 +13,16 @@
         android:background="@android:color/white"
         android:orientation="vertical"
         android:padding="5dp">
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/rec_img"
-            android:layout_width="274dp"
-            android:layout_height="300dp"
+            android:layout_width="205dp"
+            android:layout_height="223dp"
             android:scaleType="centerCrop"
             android:src="@drawable/product1"
-            app:riv_corner_radius="14dp"
             app:riv_border_color="@android:color/transparent"
             app:riv_border_width="0dp"
+            app:riv_corner_radius="14dp"
             tools:ignore="MissingClass" />
     </LinearLayout>
 

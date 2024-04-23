@@ -19,13 +19,12 @@ public class RecommededModel {
     public void setImg_url(int img_url) {
         this.img_url = img_url;
     }
-    private static int lastContactId = 0;
+    private static final int lastContactId = 0;
 
     public static ArrayList<RecommededModel> createRecProductList(int numProducts, int[] imageResources) {
         ArrayList<RecommededModel> recproducts = new ArrayList<>();
 
         for (int i = 0; i < numProducts; i++) {
-            // Ensure the imageResources array has enough elements for all products
             int imageIndex = i % imageResources.length;
             recproducts.add(new RecommededModel(imageResources[imageIndex]));
         }

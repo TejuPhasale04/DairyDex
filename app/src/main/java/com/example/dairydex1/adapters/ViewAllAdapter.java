@@ -20,8 +20,8 @@ import java.util.List;
 
 public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHolder> {
 
-    private List<ViewAllModel> itemList;
-    private Context context;
+    private final List<ViewAllModel> itemList;
+    private final Context context;
 
     public ViewAllAdapter(Context context, List<ViewAllModel> itemList) {
         this.context = context;

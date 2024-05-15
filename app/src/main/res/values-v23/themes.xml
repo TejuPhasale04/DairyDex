@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/fresh_parrot_green</item>
+        <item name="colorPrimaryDark">@color/fresh_parrot_green_dark</item>
+        <item name="colorAccent">@color/purple_200</item>
+    </style>
+</resources>

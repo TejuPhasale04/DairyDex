@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><vector android:height="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Circle -->
+    <path android:fillColor="#52ED55" android:pathData="M12,2a10,10 0,1 1,0 20a10,10 0,1 1,0 -20z"/>
+
+    <!-- Plus Sign -->
+    <path android:fillColor="@android:color/white" android:pathData="M10,12h4v2h-4v4h-2v-4h-4v-2h4v-4h2v4z"/>
+</vector>
+

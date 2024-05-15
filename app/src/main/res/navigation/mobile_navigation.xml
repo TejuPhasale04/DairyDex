@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.dairydex1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.dairydex1.ui.Profile.ProfileFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.example.dairydex1.newProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_new_product" />
+    <fragment
+        android:id="@+id/nav_my_carts"
+        android:name="com.example.dairydex1.newCartsFragment"
+        android:label="fragment_new_carts"
+        tools:layout="@layout/fragment_new_carts" />
+</navigation>

@@ -26,7 +26,7 @@
     <TextView
         android:id="@+id/nav_header_name"
         android:layout_width="374dp"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
         android:fontFamily="@font/aclonica"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/nav_header_title"
@@ -37,7 +37,7 @@
     <TextView
         android:id="@+id/nav_header_email"
         android:layout_width="374dp"
-        android:layout_height="26dp"
+        android:layout_height="33dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/nav_header_subtitle"

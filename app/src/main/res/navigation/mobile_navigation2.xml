@@ -13,12 +13,12 @@
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.dairydex1.ui.Profile.ProfileFragment"
-        android:label="@string/profile"
+        android:label="About Us"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/nav_products"
         android:name="com.example.dairydex1.newProductFragment"
-        android:label="fragment_new_product"
+        android:label="Product"
         tools:layout="@layout/fragment_new_product" />
     <fragment
         android:id="@+id/nav_my_carts"

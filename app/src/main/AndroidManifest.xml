@@ -27,6 +27,11 @@
 
         </activity>
         <activity
+            android:name=".PlacedOrderActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="Home Activity"

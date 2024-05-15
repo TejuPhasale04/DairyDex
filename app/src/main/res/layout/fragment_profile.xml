@@ -1,90 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Profile.ProfileFragment"
-    android:background="@android:color/white">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/profile"
+    android:background="@android:color/white"
+    tools:context=".ui.Profile.ProfileFragment">
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
+        tools:layout_editor_absoluteY="88dp">
+
+        <ImageView
+            android:id="@+id/nav_header"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Welcome to DairyDex – where the legacy of agricultural excellence meets the innovation of tomorrow.
+
+In the heart of rural India, amidst the gentle whispers of the countryside, Late Mr. Manikrao Bajirao Patil Singar embarked on a journey that would transform farming practices for generations. With the guidance of Mr. Shailesh Singar Patil and the inspiration drawn from the organic farming wisdom of Mr. Mangesh Singar, Mr. Manikrao delved into the realm of Dairy farming, driven by a vision to redefine traditional agricultural methods.
+
+Recognizing the pivotal role of nutrition in optimizing livestock productivity, Mr. Manikrao ventured into cattle feed, determined to enhance milk production and elevate animal health. Together with Director Mrs. Bharti Singar, Mrs. Pallavi Shinde, and Mr. Satish Golhar, they laid the foundation for a grassroots cattle feed shop that would soon capture the hearts of farmers far and wide.
+
+With an unwavering commitment to quality and innovation, DairyDex Cattlefeed Pvt. Ltd. was born, blossoming into a beacon of excellence within the agricultural sector. From humble beginnings, DairyDex has risen to become synonymous with superior quality and customer satisfaction, revolutionizing farming practices with every feed.
+
+But our journey doesn't end here. Fueled by a passion for holistic farming, we have expanded our horizons to encompass milk collection centers and groundbreaking Mukt Gotha initiatives. At DairyDex, sustainability isn't just a buzzword – it's a way of life. We are dedicated to empowering farmers, enriching communities, and nurturing a brighter, more prosperous future for agriculture.
+
+Join us in our mission to champion excellence in farming. Choose DairyDex – where tradition meets innovation, and where every feed is crafted with care to ensure the success and well-being of your livestock. Experience the DairyDex difference today."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
 
-    <EditText
-        android:layout_marginTop="20dp"
-        android:id="@+id/name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="10dp"
-        android:elevation="3dp"
-        android:padding="13dp"
-        android:hint="Name"
-        android:textColor="#888887"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_img"
-        app:layout_constraintWidth_percent=".8" />
 
-    <EditText
-        android:id="@+id/email_reg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/account"
-        android:drawablePadding="13dp"
-        android:elevation="3dp"
-        android:padding="13dp"
-        android:hint="Email"
-        android:textColor="#888887"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintWidth_percent=".8" />
-
-    <EditText
-        android:id="@+id/password_reg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/keylog"
-        android:drawablePadding="10dp"
-        android:elevation="3dp"
-        android:padding="13dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="#888887"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_reg"
-        app:layout_constraintWidth_percent=".8" />
-
-    <Button
-        android:id="@+id/reg_btn"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="14dp"
-        android:text="Update"
-        app:backgroundTint="@color/fresh_parrot_green"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_reg" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
